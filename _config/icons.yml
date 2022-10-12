@@ -1,0 +1,32 @@
+---
+Name: icons
+After:
+  - 'silvershop/*'
+---
+SilverShop\Page\Product:
+  icon: ''
+  icon_class: font-icon-p-package
+SilverShop\Page\ProductCategory:
+  icon: ''
+  icon_class: font-icon-p-shop
+SilverShop\Page\CartPage:
+  icon: ''
+  icon_class: font-icon-p-cart
+SilverShop\Page\CheckoutPage:
+  icon: ''
+  icon_class: font-icon-credit-card
+SilverShop\Page\AccountPage:
+  icon: ''
+  icon_class: font-icon-p-profile
+SilverShop\Shipping\Admin\ZoneAdmin:
+  menu_icon_class: 'silvershop-icon-zones'
+Bummzack\SsOmnipayUI\Admin\PaymentAdmin:
+  menu_icon: ''
+  menu_icon_class: font-icon-credit-card
+SilverShop\Discounts\Admin\DiscountModelAdmin:
+  menu_icon: ''
+  menu_icon_class: font-icon-down-circled
+  title: 'Cart Discounts'
+SilverShop\Shipping\Admin\ShippingMethodAdmin:
+ menu_icon: ''
+ menu_icon_class: font-icon-globe-1

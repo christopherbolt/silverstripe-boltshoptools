@@ -1,0 +1,7 @@
+---
+Name: boltshoptoolsroutes
+After: framework/routes#coreroutes
+---
+SilverStripe\Control\Director:
+  rules:
+    JsonPriceUpdater: ChristopherBolt\BoltShopTools\Controllers\JsonPriceUpdater

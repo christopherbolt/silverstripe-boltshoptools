@@ -1,0 +1,10 @@
+en:
+  ProductAttributeType:
+    PLURALNAME: Product Attributes
+    SINGULARNAME: Product Attribute
+  CartPage:
+    DESCRIPTION: ''
+  ProductCategory:
+    DESCRIPTION: ''
+  CheckoutPage:
+    DESCRIPTION: ''

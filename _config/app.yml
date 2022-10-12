@@ -1,0 +1,10 @@
+---
+Name: boltshoptoolsrequestprocessors
+After:
+  - requestprocessors
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Control\Director:
+    properties:
+      Middlewares:
+        BoltShopConfigMiddleware: '%$ChristopherBolt\BoltShopTools\Middleware\BoltShopConfigMiddleware'

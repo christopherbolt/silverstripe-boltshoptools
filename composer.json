@@ -1,0 +1,30 @@
+{
+    "name": "christopherbolt/silverstripe-boltshoptools",
+    "type": "silverstripe-vendormodule",
+    "description": "Includes common tools and configuration used in ChristopherBolt.Com silvershop sites.",
+    "homepage": "http://github.com/christopherbolt/boltshoptools",
+    "authors": [
+        {
+            "name": "Chris Bolt",
+            "email": "chris@christopherbolt.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "silverstripe/cms": "^4.0",
+    	"silverstripe/framework": "^4.0",
+		"christopherbolt/silverstripe-bolttools": "^3.0",
+        "silvershop/core": "3.x-dev"
+    },
+	"extra": {
+        "installer-name": "boltshoptools",
+		"expose": [
+            "client"
+        ]
+    },
+	 "autoload": {
+        "psr-4": {
+            "ChristopherBolt\\BoltShopTools\\": "src/"
+        }
+    }
+}

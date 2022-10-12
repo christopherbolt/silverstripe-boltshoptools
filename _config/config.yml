@@ -1,0 +1,120 @@
+---
+Name: boltshoptoolsconfig
+After: 'silvershop/*'
+---
+SilverStripe\Security\Member:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltShopMember
+Page:
+  geocode_visitor_ip: false
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltShopPage
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltShopConfig
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltShopLeftAndMain
+SilverStripe\i18n\i18n:
+  default_locale: en_NZ
+SilverShop\Extension\ShopConfigExtension:
+  base_currency: NZD
+SilverShop\ORM\FieldType\ShopCurrency:
+  decimal_delimiter: .
+  thousand_delimiter: ','
+  negative_value_format: '(%s)'
+SilverStripe\Omnipay\Model\Payment:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltPayment
+SilverShop\Model\Address:
+  enable_geocoding: false
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltAddress
+SilverShop\Page\Product:
+  show_date_added: true
+  show_stock_options: true
+  show_additional_images: true
+  hide_featured: true
+  hide_model: true
+  show_tax_exempt: true
+  show_price_instructions: true
+  hide_cost_price: true
+  show_related_products: true
+  show_reverse_related_products: true
+  global_allow_purchase: true
+  hide_shipping: false
+  show_free_shipping_instructions: true
+  extensions:
+#    - SilverShop\Discounts\Extensions\SpecificPricingExtension
+    - ChristopherBolt\BoltShopTools\Extensions\BoltProduct
+SilverShop\Model\Product\OrderItem:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltProductOrderItem
+SilverShop\Model\Variation\Variation:
+  title_separator: ': '
+  extensions:
+#    - SilverShop\Discounts\Extensions\SpecificPricingExtension
+    - ChristopherBolt\BoltShopTools\Extensions\BoltProductVariation
+    - ChristopherBolt\BoltTools\Extensions\DefaultCan
+SilverShop\Model\Variation\AttributeType:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltProductAttributeType
+    - ChristopherBolt\BoltTools\Extensions\DefaultCan
+SilverShop\Model\Variation\AttributeValue:
+  extensions:
+    - ChristopherBolt\BoltTools\Extensions\DefaultCan
+    - ChristopherBolt\BoltShopTools\Extensions\BoltProductAttributeValue
+SilverShop\Discounts\Model\SpecificPrice:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltSpecificPrice
+    - ChristopherBolt\BoltTools\Extensions\DefaultCan
+SilverShop\Discounts\Model\GiftVoucherOrderItem:
+  extensions:
+   - ChristopherBolt\BoltShopTools\Extensions\GiftVoucherOrderItem
+SilverShop\Page\ProductCategory:
+#  show_not_allowed_purchase: false
+#  show_sold_out: false
+  show_image: true
+#  sort_method: ListSorter
+#  default_sort_field: Title
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltProductCategory
+SilverShop\Page\ProductCategoryController:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltProductCategoryController
+SilverShop\SilverShop\Cart:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltShoppingCart
+SilverShop\Page\CartPage:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltCartPage
+SilverShop\Page\CheckoutPage:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltCheckoutPage
+SilverShop\Page\CheckoutPageController:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltCheckoutPageController
+SilverShop\Model\Order:
+  show_order_status_log: true
+  extensions:
+    - Bummzack\SsOmnipayUI\Extensions\PayableUIExtension
+    - ChristopherBolt\BoltShopTools\Extensions\BoltOrder
+SilverShop\Model\OrderItem:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltOrderItem
+SilverShop\Checkout\OrderProcessor:
+  send_confirmation: true
+  send_admin_notification: true
+SilverShop\Checkout\OrderEmailNotifier:
+  bcc_confirmation_to_admin: false
+  bcc_receipt_to_admin: false
+SilverShop\Model\OrderStatusLog:
+  extensions:
+    - ChristopherBolt\BoltTools\Extensions\DefaultCan
+SilverShop\Page\AccountPageController:
+  extensions:
+    - ChristopherBolt\BoltShopTools\Extensions\BoltAccountPage
+    - ChristopherBolt\BoltShopTools\Extensions\BoltOrderManipulation
+SilverStripe\Reports\Report:
+  excluded_reports:
+    - SilverShop\Reports\TaxReport
