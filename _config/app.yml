@@ -8,3 +8,4 @@ SilverStripe\Core\Injector\Injector:
     properties:
       Middlewares:
         BoltShopConfigMiddleware: '%$ChristopherBolt\BoltShopTools\Middleware\BoltShopConfigMiddleware'
+        BoltShopWindcaveMiddleware: '%$ChristopherBolt\BoltShopTools\Middleware\WindcaveMiddleware'
